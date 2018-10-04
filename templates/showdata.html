@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Data</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+     <h1>Data!</h1>
+     <table>
+         <thead><tr><th>Id</th><th>Gspx</th><th>Gspy</th><th>Messtype</th><th>Messvalue</th><th>Timestamp</th></tr></thead>
+         {% for mydata in myIotdata %}
+            <tr><td>{{ mydata.id }}</td><td>{{ mydata.gpsx }}</td><td>{{ mydata.gpsy }}</td><td>{{ mydata.messtype }}</td><td>{{ mydata.messvalue }}</td><td>{{ mydata.ts }}</td></tr>         
+         {%  endfor %}
+         </tbody>
+         </table>
+<br>
+<br>
+     Do you want to input some data? Press <a href="input">here</a> 
+</body>
+</html> 
+
